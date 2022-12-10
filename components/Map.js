@@ -6,14 +6,13 @@ import { selectOrigin } from '../slices/navSlice';
 
 const Map = () => {
     const origin = useSelector(selectOrigin);
-    console.log('SELECTOR===>>>',origin);
     
     return (
         <MapView className="flex-1"
             mapType='mutedStandard'
             initialRegion={{
-                latitude: origin?.location.lat,
-                longitude: origin?.location.lng,
+                latitude: origin.location.lat,
+                longitude: origin.location.lng,
                 latitudeDelta: 0.005,
                 longitudeDelta: 0.005,
             }}>

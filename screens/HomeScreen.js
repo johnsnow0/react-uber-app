@@ -28,7 +28,6 @@ const HomeScreen = () => {
                         },
                     }}
                     onPress={(data, details ) => {
-                        console.log('GCP =>>>',details.geometry.location);
                         dispach(
                             setOrigin({
                             location: details.geometry.location,
