@@ -5,6 +5,7 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import { GOOGLE_MAPS_APIKEY } from "@env"
 import { useDispatch } from 'react-redux';
 import { setDestination, setOrigin } from '../slices/navSlice';
+import NavFavourites from '../components/NavFavourites';
 
 const HomeScreen = () => {
     const dispach = useDispatch();
@@ -39,12 +40,13 @@ const HomeScreen = () => {
                     returnKeyType={'search'}
                     enablePoweredByContainer={false}
                     minLength={2}
-                    query={{ key: GOOGLE_MAPS_APIKEY, language: 'en' }}
+                    query={{ key: GOOGLE_MAPS_APIKEY, language: 'lt' }}
                     placeholder='Where from?'
                     nearbyPlacesAPI='GooglePlacesSearch'
                     debounce={400}
                 />
                 <NavOptions />
+                <NavFavourites />
             </View>
 
         </SafeAreaView>
